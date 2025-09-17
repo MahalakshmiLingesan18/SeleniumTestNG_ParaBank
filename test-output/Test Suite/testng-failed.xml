@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="4" parallel="tests" name="Failed suite [Test Suite]">
+  <listeners>
+    <listener class-name="com.parasoft.listener.Listener"/>
+    <listener class-name="com.parasoft.listener.AnnotationTransformer"/>
+  </listeners>
+  <test thread-count="4" parallel="tests" name="ParaBank Tests(failed)">
+    <classes>
+      <class name="com.parasoft.tests.OpenNewAccountPageTests">
+        <methods>
+          <include name="newAccountCreation"/>
+          <include name="initPage"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.parasoft.tests.OpenNewAccountPageTests -->
+      <class name="com.parasoft.tests.TransferFundsTests">
+        <methods>
+          <include name="transferFund" invocation-numbers="0"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="initPage"/>
+        </methods>
+      </class> <!-- com.parasoft.tests.TransferFundsTests -->
+    </classes>
+  </test> <!-- ParaBank Tests(failed) -->
+</suite> <!-- Failed suite [Test Suite] -->

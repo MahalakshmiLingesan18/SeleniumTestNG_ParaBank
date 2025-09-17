@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd"> -->
+
+<suite name="Test Suite">
+
+    <listeners>
+    <listener class-name="com.parasoft.listener.Listener"></listener>
+        <listener class-name="com.parasoft.listener.AnnotationTransformer"></listener>
+    </listeners>
+
+    <!-- Chrome on Windows -->
+    <test name="ParaBank Tests"  parallel="classes" thread-count="4">
+        <classes>
+            <class name="com.parasoft.tests.RegisterPageTests"/>
+            <class name="com.parasoft.tests.LoginPageTests"/>
+            <class name="com.parasoft.tests.OpenNewAccountPageTests"/>
+            <class name="com.parasoft.tests.BillPayPageTests"/>
+            <class name="com.parasoft.tests.TransferFundsTests"/>
+        </classes>
+    </test>
+
+</suite>
